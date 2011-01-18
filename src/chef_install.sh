@@ -32,9 +32,11 @@ cp USERNAME.pem ~/chef-repo/.chef
 cat >~/chef-repo/.chef/pgroudas.pem <<END
 :PGROUDAS.PEM
 END
+
 cat >~/chef-repo/.chef/pgdotcom-validator.pem <<END
 :PGDOTCOM-VALIDATOR.PEM
 END
+
 cat >~/chef-repo/.chef/knife.rb <<END
 :KNIFE.RB
 END
