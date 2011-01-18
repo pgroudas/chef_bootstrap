@@ -3,7 +3,10 @@ require 'rake/clean'
 CLEAN.include('dist/*')
 
 task :dist do
-  cp('src/chef_install', File.join('dist','chef_install.sh'), :verbose => true)
+  pgroudas_pem = IO.read('src/credentials/pgroudas.pem')
+  File.open('dist/chef_install.sh','w+') do |output_file|
+    output_file.puts IO.read('src/chef_install.sh').gsub(/:PGROUDAS.PEM/, pgroudas_pem)
+  end
 end
 
 task :default => ['clean', 'dist']
