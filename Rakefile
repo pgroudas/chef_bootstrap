@@ -4,7 +4,7 @@ CLEAN.include('dist/*')
 
 task :dist do
   mkdir('dist/bin')
-  chef_install = IO.read('src/chef_install.sh')  
+  chef_install = IO.read('src/scripts/chef_install.sh')  
   pgroudas_pem = IO.read('src/credentials/pgroudas.pem')
   pg_dot_com_validator_pem = IO.read('src/credentials/pgdotcom-validator.pem')
   
