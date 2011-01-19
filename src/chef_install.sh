@@ -29,7 +29,6 @@ cd ~/
 mkdir -p ~/chef-repo/.chef
 
 #how to automate this???
-cp USERNAME.pem ~/chef-repo/.chef
 cat >~/chef-repo/.chef/pgroudas.pem <<END
 :PGROUDAS.PEM
 END

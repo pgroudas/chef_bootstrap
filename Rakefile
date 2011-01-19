@@ -5,7 +5,7 @@ CLEAN.include('dist/*')
 task :dist do
   chef_install = IO.read('src/chef_install.sh')  
   pgroudas_pem = IO.read('src/credentials/pgroudas.pem')
-  pg_dot_com_validator_pem = IO.read('src/credentials/pgroudas.pem')
+  pg_dot_com_validator_pem = IO.read('src/credentials/pgdotcom-validator.pem')
   
   chef_install.gsub!(/:PGROUDAS.PEM/,pgroudas_pem.chomp)
   chef_install.gsub!(/:PGDOTCOM-VALIDATOR.PEM/,pg_dot_com_validator_pem.chomp)  
