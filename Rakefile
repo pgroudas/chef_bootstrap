@@ -12,6 +12,9 @@ task :dist do
   chef_install.gsub!(/:PGDOTCOM-VALIDATOR.PEM/,pg_dot_com_validator_pem.chomp)  
   chef_install.gsub!(/:KNIFE.RB/,IO.read('src/knife.rb'))
   File.open('dist/bin/chef_install.sh','w+',0655) { |output_file| output_file.puts chef_install }
+
+  cp('src/scripts/launch_ec2_instance.sh','dist/bin/launch_ec2_instance.sh')
+  chmod(0755, %w{dist/bin/launch_ec2_instance.sh dist/bin/chef_install.sh})
 end
 
 task :default => ['clean', 'dist']
