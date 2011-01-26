@@ -46,3 +46,5 @@ cd ~/chef-repo
 cp -r ~/chef-repo/client-config /etc/chef
 
 /usr/bin/chef-client
+
+#TODO delete credentials after successful bootstrapping.
